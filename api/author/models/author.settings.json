@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "articles",
+  "collectionName": "authors",
   "info": {
-    "name": "Articles",
-    "description": ""
+    "name": "Author"
   },
   "options": {
     "increments": true,
@@ -11,13 +10,10 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "Name": {
       "type": "string"
     },
-    "subtitle": {
-      "type": "string"
-    },
-    "cover": {
+    "ProfileImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -28,20 +24,9 @@
       "plugin": "upload",
       "required": false
     },
-    "content": {
-      "type": "richtext"
-    },
-    "author": {
-      "type": "string"
-    },
-    "date": {
-      "type": "date"
-    },
-    "featured": {
-      "type": "boolean"
-    },
-    "slug": {
-      "type": "string"
+    "posts": {
+      "via": "author",
+      "collection": "post"
     }
   }
 }

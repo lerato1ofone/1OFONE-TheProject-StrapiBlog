@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "Post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Featured": {
+      "type": "boolean"
+    },
+    "FeaturedSubtitle": {
+      "type": "richtext"
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "PublishedDate": {
+      "type": "date"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "author": {
+      "model": "author",
+      "via": "posts"
+    }
+  }
+}
