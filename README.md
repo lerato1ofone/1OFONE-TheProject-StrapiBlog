@@ -1,3 +1,2 @@
-# Strapi application for 1 OF ONE - The Project - Blog
-
-This Strapi Application is the Headless CMS Used for 1 OF ONE - The Project, Blog.
+# Innanet me → Blog
+This Strapi Application is the Headless CMS used for the blog on my personal website.
