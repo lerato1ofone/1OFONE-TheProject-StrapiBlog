@@ -10,7 +10,6 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001579",
     "strapi": "3.5.4",
     "strapi-admin": "3.5.4",
     "strapi-connector-mongoose": "3.5.4",
